@@ -1,0 +1,17 @@
+object AndroidLibs {
+    const val activity = "androidx.activity:activity-ktx:${Versions.activity}"
+    const val appCompat = "androidx.appcompat:appcompat:${Versions.appCompat}"
+    const val constraintLayout = "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
+    const val core = "androidx.core:core-ktx:${Versions.coreAndroidx}"
+    const val daggerHilt = "com.google.dagger:hilt-android:${Versions.daggerHilt}"
+    const val daggerHiltLifecycleViewModel = "androidx.hilt:hilt-lifecycle-viewmodel:${Versions.daggerAndroidx}"
+    const val fragment = "androidx.fragment:fragment-ktx:${Versions.fragment}"
+    const val material = "com.google.android.material:material:${Versions.material}"
+    const val navigationDynamic = "androidx.navigation:navigation-dynamic-features-fragment:${Versions.navigation}"
+    const val navigationFragment = "androidx.navigation:navigation-fragment-ktx:${Versions.navigation}"
+    const val navigationUI = "androidx.navigation:navigation-ui-ktx:${Versions.navigation}"
+    const val playCore = "com.google.android.play:core:${Versions.playCore}"
+    const val recyclerView = "androidx.recyclerview:recyclerview:${Versions.recyclerView}"
+    const val swipeRefreshLayout = "androidx.swiperefreshlayout:swiperefreshlayout:${Versions.swipeRefreshLayout}"
+    const val viewModel = "androidx.lifecycle:lifecycle-viewmodel-ktx:{verions.lifecycle}"
+}
