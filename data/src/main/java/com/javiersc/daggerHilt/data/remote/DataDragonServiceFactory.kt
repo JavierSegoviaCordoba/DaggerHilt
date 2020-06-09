@@ -1,28 +1,16 @@
-package com.javiersc.daggerHilt.di
+package com.javiersc.daggerHilt.data.remote
 
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
-import com.javiersc.daggerHilt.data.remote.DataDragonService
+import com.javiersc.daggerHilt.data.remote.services.DataDragonService
 import com.javiersc.resources.networkResponse.retrofit.NetworkResponseCallAdapterFactory
-import dagger.Module
-import dagger.Provides
-import dagger.hilt.InstallIn
-import dagger.hilt.android.components.ApplicationComponent
 import kotlinx.serialization.json.Json
 import okhttp3.MediaType.Companion.toMediaType
 import retrofit2.Retrofit
 import retrofit2.create
-import javax.inject.Singleton
 
-@Module
-@InstallIn(ApplicationComponent::class)
-class DataDragonServiceModule {
-    @Provides
-    @Singleton
-    fun providesDataDragonService(): DataDragonService = dataDragonService
-}
+object DataDragonServiceFactory {
 
-internal val dataDragonService: DataDragonService
-    get() {
+    fun pro(): DataDragonService {
         val converter = Json(block = { ignoreUnknownKeys = true })
             .asConverterFactory("application/json".toMediaType())
 
@@ -34,3 +22,4 @@ internal val dataDragonService: DataDragonService
 
         return retrofit.create()
     }
+}

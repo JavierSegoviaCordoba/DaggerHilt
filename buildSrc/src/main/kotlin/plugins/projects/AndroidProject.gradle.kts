@@ -3,9 +3,9 @@ import plugins.projects.baseConfig
 plugins {
     id("com.android.library")
     id("kotlin-android")
+    id("dagger.hilt.android.plugin")
     id("kotlin-kapt")
     id("org.jetbrains.kotlin.plugin.serialization")
-    id("dagger.hilt.android.plugin")
 }
 
 aptRuntime2CompileClasspath()
@@ -24,13 +24,9 @@ dependencies {
     }
 
     JvmLibs.apply {
-        implementation(converter)
         implementation(coroutines)
         implementation(kotlinStdlib8)
         implementation(dagger)
-        implementation(okHttp)
-        implementation(retrofit)
-        implementation(retrofitMock)
         implementation(serialization)
     }
 

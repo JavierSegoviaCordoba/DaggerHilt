@@ -1,4 +1,4 @@
-package com.javiersc.daggerHilt.data.remote
+package com.javiersc.daggerHilt.data.remote.services
 
 import com.javiersc.daggerHilt.data.remote.models.ChampionsDTO
 import com.javiersc.resources.networkResponse.NetworkResponse

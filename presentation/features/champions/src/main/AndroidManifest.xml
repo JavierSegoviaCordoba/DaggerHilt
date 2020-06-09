@@ -1,13 +1,1 @@
-<manifest xmlns:dist="http://schemas.android.com/apk/distribution"
-    package="com.javiersc.daggerHilt.presentation.features.champions">
-
-    <dist:module
-        dist:instant="true"
-        dist:title="@string/champions">
-        <dist:delivery>
-            <dist:install-time />
-        </dist:delivery>
-        <dist:fusing dist:include="true" />
-    </dist:module>
-
-</manifest>
+<manifest package="com.javiersc.daggerHilt.presentation.features.champions" />

@@ -11,9 +11,4 @@ data class InfoDTO(
     val difficulty: Int,
 )
 
-fun InfoDTO.toDomain() = Info(
-    attack = attack,
-    defense = defense,
-    magic = magic,
-    difficulty = difficulty
-)
+fun InfoDTO.toDomain() = Info(attack, defense, magic, difficulty)

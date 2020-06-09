@@ -14,5 +14,3 @@ data class Champion(
 inline class ChampionId(val id: String)
 
 inline class ChampionKey(val key: Int)
-
-class Dog(val name: String)

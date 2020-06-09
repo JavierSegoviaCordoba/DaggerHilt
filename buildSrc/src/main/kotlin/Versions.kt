@@ -12,7 +12,8 @@ object Versions {
     const val detekt = "1.9.1"
     const val fragment = "1.2.4"
     const val javax = "1"
-    const val material = "1.1.0-rc02"
+    const val lifecycle = "2.2.0"
+    const val material = "1.3.0-alpha01"
     const val navigation = "2.3.0-beta01"
     const val networkResponse = "0.4.0"
     const val okHttp = "4.7.2"
@@ -20,6 +21,7 @@ object Versions {
     const val resource = "2.0.0"
     const val recyclerView = "1.1.0"
     const val retrofit = "2.9.0"
+    const val room = "2.2.5"
     const val serialization = "0.20.0-1.4-M2"
     const val swipeRefreshLayout = "1.0.0"
 }

@@ -1,9 +1,8 @@
-import plugins.projects.baseBuildTypesDynamic
+import plugins.projects.baseBuildTypes
 import plugins.projects.baseConfig
 
 plugins {
     id("com.android.library")
-//    id("com.android.dynamic-feature")
     id("kotlin-android")
     id("kotlin-kapt")
     id("org.jetbrains.kotlin.plugin.serialization")
@@ -14,7 +13,7 @@ aptRuntime2CompileClasspath()
 
 android {
     baseConfig()
-    baseBuildTypesDynamic()
+    baseBuildTypes()
 }
 
 dependencies {
@@ -24,7 +23,6 @@ dependencies {
     }
 
     Projects.Presentation.apply {
-//        implementation(project(app))
         implementation(project(navigation))
     }
 
@@ -34,13 +32,9 @@ dependencies {
     }
 
     JvmLibs.apply {
-        implementation(converter)
         implementation(coroutines)
         implementation(kotlinStdlib8)
         implementation(dagger)
-        implementation(okHttp)
-        implementation(retrofit)
-        implementation(retrofitMock)
         implementation(serialization)
     }
 

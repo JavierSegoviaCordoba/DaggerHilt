@@ -1,5 +1,5 @@
 include(":data")
-include(":di")
+include(":_di").also { project(":_di").name = "di" }.also { include(":di") }
 include(":domain")
 include(
     ":presentation:app",

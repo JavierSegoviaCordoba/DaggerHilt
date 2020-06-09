@@ -39,10 +39,3 @@ fun BaseExtension.baseBuildTypes() {
         }
     }
 }
-
-fun BaseExtension.baseBuildTypesDynamic() {
-    buildTypes {
-        getByName("release") { }
-        getByName("debug") { }
-    }
-}

@@ -6,6 +6,6 @@ import domain.models.Error
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
-class GetChampionsUseCase @Inject constructor(private val dataDragonRepository: DataDragonRepository) {
-    operator fun invoke(): Flow<Resource<List<Champion>, Error>> = dataDragonRepository.getChampions()
+class GetChampionsUseCase @Inject constructor(private val dataDragonRepo: DataDragonRepo) {
+    operator fun invoke(): Flow<Resource<List<Champion>, Error>> = dataDragonRepo.getChampions()
 }

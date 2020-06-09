@@ -5,6 +5,6 @@ import domain.models.Champion
 import domain.models.Error
 import kotlinx.coroutines.flow.Flow
 
-interface DataDragonRepository {
+interface DataDragonRepo {
     fun getChampions(): Flow<Resource<List<Champion>, Error>>
 }

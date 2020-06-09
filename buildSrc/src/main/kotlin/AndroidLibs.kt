@@ -12,6 +12,8 @@ object AndroidLibs {
     const val navigationUI = "androidx.navigation:navigation-ui-ktx:${Versions.navigation}"
     const val playCore = "com.google.android.play:core:${Versions.playCore}"
     const val recyclerView = "androidx.recyclerview:recyclerview:${Versions.recyclerView}"
+    const val roomRuntime = "androidx.room:room-runtime:${Versions.room}"
+    const val roomKTX = "androidx.room:room-ktx:${Versions.room}"
     const val swipeRefreshLayout = "androidx.swiperefreshlayout:swiperefreshlayout:${Versions.swipeRefreshLayout}"
-    const val viewModel = "androidx.lifecycle:lifecycle-viewmodel-ktx:{verions.lifecycle}"
+    const val viewModel = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycle}"
 }
