@@ -2,7 +2,7 @@ plugins {
     `kotlin-dsl`
 }
 
-val androidGradle = "4.1.0-beta01"
+val androidGradle = "4.2.0-alpha01"
 val safeArgs = "2.3.0-rc01"
 val kotlin = "1.4-M2"
 val dependencyUpdates = "0.28.0"
@@ -15,7 +15,7 @@ repositories {
     google()
     maven("https://oss.sonatype.org/content/repositories/snapshots/")
     maven("https://dl.bintray.com/kotlin/kotlin-eap")
-    maven("https://plugins.gradle.org/m2")
+    gradlePluginPortal()
 }
 
 dependencies {

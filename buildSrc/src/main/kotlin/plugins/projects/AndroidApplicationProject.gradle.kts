@@ -27,7 +27,6 @@ dependencies {
         implementation(project(navigation))
     }
 
-    // TODO: REMOVE WHEN DYNAMIC FEATURES WORK
     Projects.Presentation.Features.apply {
         implementation(project(champions))
     }
