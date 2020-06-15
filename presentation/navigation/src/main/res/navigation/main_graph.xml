@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:startDestination="@id/championsFragment">
+<navigation xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:startDestination="@id/championsGraph">
 
-    <fragment
-        android:id="@+id/championsFragment"
-        android:name="com.javiersc.daggerHilt.presentation.features.champions.ChampionsFragment"
-        android:label="Champions"
-        app:moduleName="champions" />
+    <include app:graph="@navigation/champions_graph" />
 
 </navigation>

@@ -10,3 +10,9 @@ object JvmLibs {
     const val retrofitMock = "com.squareup.retrofit2:retrofit-mock:${Versions.retrofit}"
     const val serialization = "org.jetbrains.kotlinx:kotlinx-serialization-runtime:${Versions.serialization}"
 }
+
+object JvmTestLibs {
+    const val kotestJunit = "io.kotest:kotest-runner-junit5-jvm:${Versions.kotest}"
+    const val kotestAssertions = "io.kotest:kotest-assertions-core-jvm:${Versions.kotest}"
+    const val mockWebServer = "com.squareup.okhttp3:mockwebserver:${Versions.okHttp}"
+}

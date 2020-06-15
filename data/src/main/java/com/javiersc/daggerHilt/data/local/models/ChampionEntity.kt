@@ -3,10 +3,10 @@ package com.javiersc.daggerHilt.data.local.models
 import androidx.room.Embedded
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import domain.models.Champion
-import domain.models.ChampionId
-import domain.models.ChampionKey
-import domain.models.Info
+import com.javiersc.daggerHilt.domain.models.Champion
+import com.javiersc.daggerHilt.domain.models.ChampionId
+import com.javiersc.daggerHilt.domain.models.ChampionKey
+import com.javiersc.daggerHilt.domain.models.Info
 
 @Entity(tableName = "champion")
 data class ChampionEntity(
@@ -31,13 +31,14 @@ fun Champion.toEntity(): ChampionEntity = ChampionEntity(
     tags = tags,
 )
 
-fun ChampionEntity.toDomain(): Champion = Champion(
-    id = ChampionId(id),
-    key = ChampionKey(key),
-    name = name,
-    title = title,
-    blurb = blurb,
-    info = info,
-    image = image,
-    tags = tags
-)
+fun ChampionEntity.toDomain(): Champion =
+    Champion(
+        id = ChampionId(id),
+        key = ChampionKey(key),
+        name = name,
+        title = title,
+        blurb = blurb,
+        info = info,
+        image = image,
+        tags = tags
+    )

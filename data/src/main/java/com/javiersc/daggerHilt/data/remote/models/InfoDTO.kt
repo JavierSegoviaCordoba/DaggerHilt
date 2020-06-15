@@ -1,6 +1,6 @@
 package com.javiersc.daggerHilt.data.remote.models
 
-import domain.models.Info
+import com.javiersc.daggerHilt.domain.models.Info
 import kotlinx.serialization.Serializable
 
 @Serializable
@@ -11,4 +11,5 @@ data class InfoDTO(
     val difficulty: Int,
 )
 
-fun InfoDTO.toDomain() = Info(attack, defense, magic, difficulty)
+fun InfoDTO.toDomain() =
+    Info(attack, defense, magic, difficulty)

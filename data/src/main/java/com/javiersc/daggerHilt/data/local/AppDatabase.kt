@@ -1,6 +1,6 @@
 package com.javiersc.daggerHilt.data.local
 
-import android.app.Application
+import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
@@ -16,8 +16,8 @@ abstract class AppDatabase : RoomDatabase() {
     abstract fun championsDao(): ChampionsDAO
 
     companion object {
-        operator fun invoke(application: Application): AppDatabase {
-            return Room.databaseBuilder(application, AppDatabase::class.java, "app_database")
+        operator fun invoke(context: Context): AppDatabase {
+            return Room.databaseBuilder(context, AppDatabase::class.java, "app_database")
                 .fallbackToDestructiveMigration()
                 .build()
         }

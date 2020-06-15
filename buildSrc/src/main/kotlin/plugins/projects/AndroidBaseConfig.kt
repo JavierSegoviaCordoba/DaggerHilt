@@ -24,8 +24,20 @@ fun BaseExtension.baseConfig() {
     buildFeatures.viewBinding = true
 
     packagingOptions {
-        exclude("META-INF/*.kotlin_module")
+        setExcludes(
+            setOf(
+                "META-INF/LICENSE.md",
+                "META-INF/LICENSE-notice.md",
+                "META-INF/MANIFEST.MF",
+                "META-INF/maven/com.google.code.findbugs/jsr305/pom.xml",
+                "META-INF/maven/com.google.code.findbugs/jsr305/pom.properties",
+                "META-INF/proguard/coroutines.pro",
+                "META-INF/*.kotlin_module"
+            )
+        )
     }
+
+    lintOptions.isAbortOnError = false
 }
 
 fun BaseExtension.baseBuildTypes() {
@@ -36,6 +48,11 @@ fun BaseExtension.baseBuildTypes() {
         }
         getByName("debug") {
             isMinifyEnabled = false
+        }
+
+        create("mock") {
+            initWith(getByName("debug"))
+            matchingFallbacks = (matchingFallbacks + mutableListOf("debug")).toMutableList()
         }
     }
 }

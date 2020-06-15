@@ -1,8 +1,8 @@
 package com.javiersc.daggerHilt.data.remote.models
 
-import domain.models.Champion
-import domain.models.ChampionId
-import domain.models.ChampionKey
+import com.javiersc.daggerHilt.domain.models.Champion
+import com.javiersc.daggerHilt.domain.models.ChampionId
+import com.javiersc.daggerHilt.domain.models.ChampionKey
 import kotlinx.serialization.Serializable
 
 @Serializable
@@ -20,13 +20,14 @@ data class ChampionDTO(
     val stats: StatsDTO,
 )
 
-fun ChampionDTO.toDomain(): Champion = Champion(
-    id = ChampionId(id),
-    key = ChampionKey(key.toInt()),
-    name = name,
-    title = title,
-    blurb = blurb,
-    info = info.toDomain(),
-    image = image.toDomain(),
-    tags = tags,
-)
+fun ChampionDTO.toDomain(): Champion =
+    Champion(
+        id = ChampionId(id),
+        key = ChampionKey(key.toInt()),
+        name = name,
+        title = title,
+        blurb = blurb,
+        info = info.toDomain(),
+        image = image.toDomain(),
+        tags = tags,
+    )

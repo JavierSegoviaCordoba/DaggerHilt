@@ -1,10 +1,13 @@
 include(":data")
-include(":_di").also { project(":_di").name = "di" }.also { include(":di") }
+
 include(":domain")
+
 include(
     ":presentation:app",
+    ":presentation:common",
     ":presentation:models",
     ":presentation:navigation",
+    ":presentation:features:_main",
     ":presentation:features:champions",
     ":presentation:features:championDetail"
 )

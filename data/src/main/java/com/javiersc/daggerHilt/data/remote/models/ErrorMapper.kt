@@ -1,7 +1,7 @@
 package com.javiersc.daggerHilt.data.remote.models
 
+import com.javiersc.daggerHilt.domain.models.Error
 import com.javiersc.resources.networkResponse.Headers
-import domain.models.Error
 
 fun errorToDomain(error: Unit?, code: Int, headers: Headers) = Error.DEFAULT
 

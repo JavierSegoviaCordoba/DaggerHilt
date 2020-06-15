@@ -19,16 +19,19 @@ android {
 
 dependencies {
     Projects.apply {
-        implementation(project(di))
+        implementation(project(data))
         implementation(project(domain))
     }
 
     Projects.Presentation.apply {
+        implementation(project(common))
         implementation(project(navigation))
     }
 
     Projects.Presentation.Features.apply {
+        implementation(project(main))
         implementation(project(champions))
+        implementation(project(championDetail))
     }
 
     Libs.apply {

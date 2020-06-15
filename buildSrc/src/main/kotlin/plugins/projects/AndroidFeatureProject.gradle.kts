@@ -18,11 +18,11 @@ android {
 
 dependencies {
     Projects.apply {
-        implementation(project(di))
         implementation(project(domain))
     }
 
     Projects.Presentation.apply {
+        implementation(project(common))
         implementation(project(navigation))
     }
 
@@ -51,6 +51,7 @@ dependencies {
         implementation(daggerHiltLifecycleViewModel)
         implementation(fragment)
         implementation(material)
+        implementation(navigationFragment)
         implementation(recyclerView)
         implementation(swipeRefreshLayout)
     }

@@ -11,6 +11,13 @@ dependencies {
         implementation(converter)
         implementation(okHttp)
         implementation(retrofit)
+        implementation(retrofitMock)
+    }
+
+    JvmTestLibs.apply {
+        implementation(kotestJunit)
+        implementation(kotestAssertions)
+        implementation(mockWebServer)
     }
 
     AndroidLibs.apply {

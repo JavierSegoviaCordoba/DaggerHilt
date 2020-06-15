@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/championsGraph"
+    app:startDestination="@id/championsFragment">
+
+    <fragment
+        android:id="@+id/championsFragment"
+        android:name="com.javiersc.daggerHilt.presentation.features.champions.ChampionsFragment"
+        android:label="Champions">
+        <action
+            android:id="@+id/championDetailFragment"
+            app:destination="@id/championDetailFragment"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_close_exit"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/championDetailFragment"
+        android:name="com.javiersc.daggerHilt.presentation.features.championDetail.ChampionDetailFragment"
+        android:label="Champion Detail" />
+
+</navigation>

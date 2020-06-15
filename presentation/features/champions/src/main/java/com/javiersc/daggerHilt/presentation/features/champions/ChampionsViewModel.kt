@@ -2,11 +2,11 @@ package com.javiersc.daggerHilt.presentation.features.champions
 
 import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.ViewModel
+import com.javiersc.daggerHilt.domain.models.Champion
+import com.javiersc.daggerHilt.domain.models.Error
+import com.javiersc.daggerHilt.domain.useCases.GetChampionsUseCase
 import com.javiersc.resources.core.extensions.viewModel.launch
 import com.javiersc.resources.resource.Resource
-import domain.GetChampionsUseCase
-import domain.models.Champion
-import domain.models.Error
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.collect

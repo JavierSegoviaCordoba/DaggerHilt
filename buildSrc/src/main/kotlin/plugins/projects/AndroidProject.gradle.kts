@@ -1,17 +1,19 @@
+import plugins.projects.baseBuildTypes
 import plugins.projects.baseConfig
 
 plugins {
     id("com.android.library")
     id("kotlin-android")
-    id("dagger.hilt.android.plugin")
     id("kotlin-kapt")
     id("org.jetbrains.kotlin.plugin.serialization")
+    id("dagger.hilt.android.plugin")
 }
 
 aptRuntime2CompileClasspath()
 
 android {
     baseConfig()
+    baseBuildTypes()
 }
 
 dependencies {

@@ -1,7 +1,7 @@
 package com.javiersc.daggerHilt.data.remote.models
 
+import com.javiersc.daggerHilt.domain.models.Champion
 import com.javiersc.resources.networkResponse.Headers
-import domain.models.Champion
 import kotlinx.serialization.Serializable
 
 @Serializable
