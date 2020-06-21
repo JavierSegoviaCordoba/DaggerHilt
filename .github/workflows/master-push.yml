@@ -33,9 +33,8 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gradle-wrapper-
 
-# FixMe: jetifier
-#      - name: Build
-#        run: ./gradlew build --build-cache
+      - name: Build
+        run: ./gradlew build
 
       - name: Tests
         run: ./gradlew test

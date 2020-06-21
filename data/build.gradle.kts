@@ -15,8 +15,8 @@ dependencies {
     }
 
     JvmTestLibs.apply {
-        implementation(kotestJunit)
-        implementation(kotestAssertions)
+        testImplementation(kotestJunit)
+        testImplementation(kotestAssertions)
         implementation(mockWebServer)
     }
 
